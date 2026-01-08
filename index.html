@@ -66,8 +66,7 @@ overflow:hidden
 .card-header{
 background:#0f172a;
 padding:22px;
-display:grid;
-grid-template-columns:auto 1fr auto;
+display:flex;
 gap:16px;
 align-items:center;
 border-bottom:3px solid #ff6b35
@@ -78,13 +77,6 @@ background:#fff;
 padding:6px;
 border-radius:10px;
 object-fit:contain
-}
-.industry-image{
-width:64px;
-height:44px;
-border-radius:8px;
-object-fit:cover;
-border:2px solid rgba(255,255,255,0.3)
 }
 .card-title{
 font-size:22px;
@@ -101,6 +93,16 @@ border-radius:20px;
 font-size:12px;
 font-weight:700
 }
+
+/* INDUSTRY BANNER IMAGE */
+.industry-banner{
+width:100%;
+height:180px;
+object-fit:cover;
+display:block;
+border-bottom:2px solid #ff6b35
+}
+
 .card-body{padding:26px}
 
 /* LIST */
@@ -213,7 +215,6 @@ background:#020617
 .services{grid-template-columns:1fr}
 .actions{grid-template-columns:repeat(2,1fr)}
 .footer-grid{grid-template-columns:1fr}
-.card-header{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -241,8 +242,8 @@ Building and supporting scalable businesses across India, Malaysia, Dubai and gl
 <div class="card-title">V4 Homes</div>
 <div class="badge">15+ Years Experience</div>
 </div>
-<img class="industry-image" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884355/ChatGPT_Image_Jan_8_2026_08_28_48_PM_ijibd2.png">
 </div>
+<img class="industry-banner" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884355/ChatGPT_Image_Jan_8_2026_08_28_48_PM_ijibd2.png">
 <div class="card-body">
 <ul class="list">
 <li>Residential and commercial construction projects</li>
@@ -261,17 +262,18 @@ Building and supporting scalable businesses across India, Malaysia, Dubai and gl
 <div class="card-title">V4 Exports</div>
 <div class="badge">8+ Years Experience</div>
 </div>
-<img class="industry-image" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884513/ChatGPT_Image_Jan_8_2026_08_31_40_PM_pmrg66.png">
 </div>
+<img class="industry-banner" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884513/ChatGPT_Image_Jan_8_2026_08_31_40_PM_pmrg66.png">
 <div class="card-body">
 <ul class="list">
-<li>Agri Fresh Produce and Commodities, Food and Dairy Products, Indian Devotional Pooja Products, Technology Products and Services.</li>
+<li>Agri fresh produce and commodities, food and dairy products</li>
 <li>Fresh vegetables, fruits, spices and herbs</li>
-<li>Cosmetics, leather goods and pooja products</li>
+<li>Indian devotional pooja products</li>
+<li>Cosmetics and leather goods</li>
 <li>Customised sourcing based on buyer specifications</li>
 <li>Exports to Middle East, Europe, Southeast Asia, UK and USA</li>
-<li>Exploring Imports from China, Iran, Malysia, Vietnam, Thailand and Indonesia</li>
-<li>Experience in cross-shipments across multiple countries</li>
+<li>Imports from China, Iran, Malaysia, Vietnam, Thailand and Indonesia</li>
+<li>Cross-shipments across multiple countries</li>
 </ul>
 </div>
 </div>
@@ -284,15 +286,15 @@ Building and supporting scalable businesses across India, Malaysia, Dubai and gl
 <div class="card-title">Vibranex Infotech Solutions</div>
 <div class="badge">Technology & AI Partner</div>
 </div>
-<img class="industry-image" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884547/ChatGPT_Image_Jan_8_2026_08_32_02_PM_buxtdb.png">
 </div>
+<img class="industry-banner" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884547/ChatGPT_Image_Jan_8_2026_08_32_02_PM_buxtdb.png">
 <div class="card-body">
 <div class="services">
 <div class="service"><div class="service-icon">🌐</div><div class="service-name">Custom Websites</div></div>
 <div class="service"><div class="service-icon">📱</div><div class="service-name">Mobile Applications</div></div>
 <div class="service"><div class="service-icon">🤖</div><div class="service-name">AI & Automation</div></div>
 <div class="service"><div class="service-icon">🛒</div><div class="service-name">Ecommerce Platforms</div></div>
-<div class="service"><div class="service-icon"⚙️</div><div class="service-name">Custom Software</div></div>
+<div class="service"><div class="service-icon">⚙️</div><div class="service-name">Custom Software</div></div>
 <div class="service"><div class="service-icon">🏢</div><div class="service-name">Enterprise Systems</div></div>
 </div>
 
