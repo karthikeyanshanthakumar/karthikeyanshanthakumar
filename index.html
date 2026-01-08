@@ -15,13 +15,9 @@
 
 body{
 font-family:'Source Sans 3',system-ui,sans-serif;
-background:#f5f5f5;
-color:#1f2937;
-line-height:1.6
-}
-
-h1,h2,h3,.overlay-title{
-font-family:'Inter',system-ui,sans-serif;
+background:#f3f4f6;
+color:#111827;
+line-height:1.6;
 }
 
 .container{
@@ -33,137 +29,155 @@ background:#ffffff;
 /* HERO */
 .hero{
 background:linear-gradient(135deg,#0f172a,#1e293b);
-padding:60px 24px;
+padding:56px 24px;
 text-align:center;
 border-bottom:4px solid #ff6b35;
 }
-.ceo-photo{
+
+.hero img{
 width:120px;
 height:120px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid #ff6b35;
-box-shadow:0 8px 24px rgba(0,0,0,.35);
-margin-bottom:18px;
+margin-bottom:16px;
 }
-.hero-name{
-font-size:30px;
+
+.hero h1{
+font-family:'Inter',sans-serif;
+font-size:28px;
 font-weight:700;
 color:#ffffff;
 }
-.hero-title{
-margin-top:6px;
-font-size:14px;
-letter-spacing:2px;
-color:#ff6b35;
-font-weight:700;
-}
-.hero-headline{
-margin-top:14px;
-font-size:16px;
+
+.hero p{
+margin-top:8px;
+font-size:15px;
 color:#e5e7eb;
 }
 
-/* CARD */
-.section{padding:32px 22px;}
+/* SECTION */
+.section{
+padding:32px 20px;
+}
 
+/* CARD */
 .card{
 background:#ffffff;
 border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 margin-bottom:32px;
-box-shadow:0 10px 30px rgba(0,0,0,.12);
 overflow:hidden;
+border:1px solid #e5e7eb;
 }
 
-/* IMAGE HEADER WITH OVERLAY */
-.card-image-header{
+/* CARD IMAGE HEADER */
+.card-header{
 position:relative;
-}
-.card-image-header img{
-width:100%;
 height:200px;
+}
+
+.card-header img.bg{
+width:100%;
+height:100%;
 object-fit:cover;
 display:block;
 }
-.overlay-content{
+
+/* OVERLAY */
+.card-overlay{
 position:absolute;
 bottom:16px;
 left:16px;
+right:16px;
 display:flex;
-gap:14px;
 align-items:center;
-background:rgba(15,23,42,0.85);
-padding:12px 16px;
-border-radius:14px;
+gap:14px;
+background:rgba(15,23,42,0.88);
+padding:14px 16px;
+border-radius:16px;
 }
-.overlay-logo{
+
+.card-overlay img.logo{
 width:48px;
 height:48px;
+object-fit:contain;
 background:#ffffff;
 padding:6px;
 border-radius:10px;
-object-fit:contain;
+flex-shrink:0;
 }
-.overlay-title{
-color:#ffffff;
-font-size:20px;
+
+.card-overlay h2{
+font-family:'Inter',sans-serif;
+font-size:18px;
 font-weight:700;
+color:#ffffff;
 }
-.overlay-badge{
+
+.badge{
 margin-top:4px;
+display:inline-block;
 background:#ff6b35;
 color:#ffffff;
 padding:4px 12px;
-border-radius:16px;
+border-radius:14px;
 font-size:11px;
 font-weight:700;
 }
 
-/* LIST WITH ICON BULLETS */
-.card-body{padding:26px;}
-.list{list-style:none;}
+/* CARD BODY */
+.card-body{
+padding:24px;
+}
+
+.list{
+list-style:none;
+}
+
 .list li{
 display:flex;
 gap:12px;
 align-items:flex-start;
 padding:14px 16px;
-background:#fafafa;
-margin-bottom:12px;
+background:#f9fafb;
 border-radius:12px;
+margin-bottom:12px;
 }
+
 .list li::before{
-content:"";
-width:18px;
-height:18px;
-margin-top:4px;
-flex-shrink:0;
-background-color:#ff6b35;
-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M9 16.17l-3.88-3.88-1.41 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
--webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M9 16.17l-3.88-3.88-1.41 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
+content:"✔";
+color:#ff6b35;
+font-weight:700;
+margin-top:2px;
 }
 
 /* SERVICES */
 .services{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
+grid-template-columns:1fr;
+gap:16px;
 }
+
 .service{
 background:#ffffff;
 border:1px solid #e5e7eb;
 border-radius:16px;
-padding:20px 14px;
+padding:22px 16px;
 text-align:center;
-box-shadow:0 4px 12px rgba(0,0,0,0.05);
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
-.service-icon{
+
+.service span{
+display:block;
 font-size:26px;
-margin-bottom:8px;
+margin-bottom:10px;
 }
-.service-name{
-font-size:13px;
+
+.service p{
+font-family:'Inter',sans-serif;
 font-weight:600;
-line-height:1.4;
+font-size:14px;
 }
 
 /* CTA */
@@ -174,65 +188,45 @@ color:#ffffff;
 text-align:center;
 padding:18px;
 border-radius:16px;
-font-size:17px;
 font-weight:700;
 text-decoration:none;
-margin:32px 0 24px;
+margin:32px 0 20px;
 }
 
 /* ACTIONS */
 .actions{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:12px;
-margin-bottom:28px;
 }
+
 .action{
 background:#0f172a;
 color:#ffffff;
-padding:14px 10px;
+padding:14px;
 border-radius:14px;
 text-align:center;
 text-decoration:none;
-font-size:12px;
-font-weight:700;
+font-weight:600;
+font-size:13px;
 }
 
 /* FOOTER */
-.footer-contact{
-background:#0f172a;
-color:#ffffff;
-padding:30px 24px;
-}
-.footer-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-.footer-title{
-font-size:12px;
-letter-spacing:1.5px;
-color:#ff6b35;
-font-weight:700;
-margin-bottom:8px;
-}
-.footer-text{
-font-size:14px;
-line-height:1.7;
-}
 .footer{
-text-align:center;
-font-size:11px;
-color:#9ca3af;
-padding:14px;
 background:#020617;
+color:#9ca3af;
+text-align:center;
+padding:18px;
+font-size:11px;
 }
 
-@media(max-width:640px){
-.services{grid-template-columns:1fr;}
-.actions{grid-template-columns:repeat(2,1fr);}
-.footer-grid{grid-template-columns:1fr;}
-.card-image-header img{height:180px;}
+@media(min-width:640px){
+.services{
+grid-template-columns:1fr 1fr;
+}
+.actions{
+grid-template-columns:repeat(4,1fr);
+}
 }
 </style>
 </head>
@@ -242,25 +236,22 @@ background:#020617;
 
 <!-- HERO -->
 <div class="hero">
-<img class="ceo-photo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767866807/WhatsApp_Image_2026-01-08_at_3.12.57_PM_kupk34.jpg">
-<div class="hero-name">Karthikeyan Shanthakumar</div>
-<div class="hero-title">ENTREPRENEUR</div>
-<div class="hero-headline">
-Building and supporting scalable businesses across India, Malaysia, Dubai and global markets
-</div>
+<img src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767866807/WhatsApp_Image_2026-01-08_at_3.12.57_PM_kupk34.jpg" alt="Karthikeyan Shanthakumar">
+<h1>Karthikeyan Shanthakumar</h1>
+<p>Building and supporting scalable businesses across India, Malaysia and Dubai</p>
 </div>
 
 <div class="section">
 
 <!-- V4 HOMES -->
 <div class="card">
-<div class="card-image-header">
-<img src="PASTE_REAL_ESTATE_IMAGE_LINK_HERE">
-<div class="overlay-content">
-<img class="overlay-logo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767864584/Screenshot_2018-10-18-14-30-03-674_com.google.android.apps.docs_dqsyxh.jpg">
+<div class="card-header">
+<img class="bg" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884355/ChatGPT_Image_Jan_8_2026_08_28_48_PM_ijibd2.png">
+<div class="card-overlay">
+<img class="logo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767864584/Screenshot_2018-10-18-14-30-03-674_com.google.android.apps.docs_dqsyxh.jpg">
 <div>
-<div class="overlay-title">V4 Homes</div>
-<div class="overlay-badge">15+ Years Experience</div>
+<h2>V4 Homes</h2>
+<div class="badge">15+ Years Experience</div>
 </div>
 </div>
 </div>
@@ -276,13 +267,13 @@ Building and supporting scalable businesses across India, Malaysia, Dubai and gl
 
 <!-- V4 EXPORTS -->
 <div class="card">
-<div class="card-image-header">
-<img src="PASTE_EXPORTS_IMAGE_LINK_HERE">
-<div class="overlay-content">
-<img class="overlay-logo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767864018/ChatGPT_Image_Dec_30_2025_06_07_29_PM_cqkozp.png">
+<div class="card-header">
+<img class="bg" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884513/ChatGPT_Image_Jan_8_2026_08_31_40_PM_pmrg66.png">
+<div class="card-overlay">
+<img class="logo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767864018/ChatGPT_Image_Dec_30_2025_06_07_29_PM_cqkozp.png">
 <div>
-<div class="overlay-title">V4 Exports</div>
-<div class="overlay-badge">8+ Years Experience</div>
+<h2>V4 Exports</h2>
+<div class="badge">8+ Years Experience</div>
 </div>
 </div>
 </div>
@@ -293,35 +284,32 @@ Building and supporting scalable businesses across India, Malaysia, Dubai and gl
 <li>Supply of cosmetics, leather goods and devotional pooja products</li>
 <li>Customised sourcing strictly based on buyer specifications</li>
 <li>Exports to Middle East, Europe, Southeast Asia and USA</li>
-<li>Imports from China including machinery parts, electronics and home needs</li>
-<li>Active sourcing networks across Vietnam, Thailand and Indonesia</li>
-<li>Experience in cross-shipments and multi-country trade operations</li>
+<li>Imports from China including machinery parts and electronics</li>
 </ul>
 </div>
 </div>
 
 <!-- VIBRANEX -->
 <div class="card">
-<div class="card-image-header">
-<img src="PASTE_TECH_IMAGE_LINK_HERE">
-<div class="overlay-content">
-<img class="overlay-logo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767878364/Vibranex_Logo_New_AI_Powered_Business_Solutions__20250627_190440_0000_jrexmo.png">
+<div class="card-header">
+<img class="bg" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767884547/ChatGPT_Image_Jan_8_2026_08_32_02_PM_buxtdb.png">
+<div class="card-overlay">
+<img class="logo" src="https://res.cloudinary.com/drvsbodf2/image/upload/v1767878364/Vibranex_Logo_New_AI_Powered_Business_Solutions__20250627_190440_0000_jrexmo.png">
 <div>
-<div class="overlay-title">Vibranex Infotech Solutions</div>
-<div class="overlay-badge">Technology & AI Partner</div>
+<h2>Vibranex Infotech Solutions</h2>
+<div class="badge">Technology & AI Partner</div>
 </div>
 </div>
 </div>
 <div class="card-body">
 <div class="services">
-<div class="service"><div class="service-icon">🌐</div><div class="service-name">Enterprise Websites & Portals</div></div>
-<div class="service"><div class="service-icon">📱</div><div class="service-name">Mobile & Web Applications</div></div>
-<div class="service"><div class="service-icon">🤖</div><div class="service-name">AI Automation & Intelligent Systems</div></div>
-<div class="service"><div class="service-icon">🛒</div><div class="service-name">Scalable Ecommerce Platforms</div></div>
-<div class="service"><div class="service-icon">⚙️</div><div class="service-name">Custom Software Development</div></div>
-<div class="service"><div class="service-icon">🏢</div><div class="service-name">Enterprise Digital Solutions</div></div>
+<div class="service"><span>🌐</span><p>Enterprise Websites & Portals</p></div>
+<div class="service"><span>📱</span><p>Mobile & Web Applications</p></div>
+<div class="service"><span>🤖</span><p>AI Automation & Intelligent Systems</p></div>
+<div class="service"><span>🛒</span><p>Scalable Ecommerce Platforms</p></div>
+<div class="service"><span>⚙️</span><p>Custom Software Development</p></div>
+<div class="service"><span>🏢</span><p>Enterprise Digital Solutions</p></div>
 </div>
-<a class="cta" href="https://www.vibranexinfotech.com" target="_blank">www.vibranexinfotech.com</a>
 </div>
 </div>
 
@@ -331,29 +319,9 @@ Building and supporting scalable businesses across India, Malaysia, Dubai and gl
 <a class="action" href="tel:+918667568343">Call</a>
 <a class="action" href="mailto:v4export@gmail.com">Email</a>
 <a class="action" href="https://www.linkedin.com/in/karthikeyan-shanthakumar-8a045129b/">LinkedIn</a>
-<a class="action" download href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AFN:Karthikeyan Shanthakumar%0ATEL:+918667568343%0AEND:VCARD">Save</a>
+<a class="action" href="https://www.vibranexinfotech.com" target="_blank">Website</a>
 </div>
 
-</div>
-
-<div class="footer-contact">
-<div class="footer-grid">
-<div>
-<div class="footer-title">Mobile / WhatsApp</div>
-<div class="footer-text">
-+91 86675 68343<br>
-+91 96005 56660
-</div>
-</div>
-<div>
-<div class="footer-title">Office Address</div>
-<div class="footer-text">
-TVH Beliciaa Towers, Tower 2, 6th Floor,<br>
-71/4, MRC Nagar<br>
-R.A. Puram, Chennai – 600028
-</div>
-</div>
-</div>
 </div>
 
 <div class="footer">
