@@ -234,18 +234,35 @@ font-size:13px;
 /* FOOTER */
 .footer{
 background:#020617;
-color:#9ca3af;
-text-align:center;
-padding:18px;
-font-size:11px;
+color:#e5e7eb;
+padding:28px 22px;
+font-size:14px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:24px;
+max-width:760px;
+margin:auto;
+}
+
+.footer h4{
+color:#ff6b35;
+font-size:13px;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.footer p{
+line-height:1.7;
+font-size:15px;
 }
 
 @media(min-width:640px){
-.services{
+.footer-grid{
 grid-template-columns:1fr 1fr;
-}
-.actions{
-grid-template-columns:repeat(4,1fr);
 }
 }
 </style>
@@ -368,22 +385,27 @@ Connect with me on WhatsApp
 
 <div class="footer">
 
-<strong>Vibranex Infotech Solutions</strong><br>
-AI powered business and digital transformation partner
+<div class="footer-grid">
 
-<div style="margin-top:14px;">
-📞 <strong>Mobile / WhatsApp</strong><br>
- +91 86675 68343 / +91-9600556660 
+<div>
+<h4>Mobile / WhatsApp</h4>
+<p>
++91 86675 68343<br>
++91 96005 56660
+</p>
 </div>
 
-<div style="margin-top:12px;">
-📍 <strong>Office Address</strong><br>
-71/4, TVH Beliciaa Towers, Tower 2,<br>
-MRC Nagar, R A Puram,<br>
-Chennai – 600028, India
+<div>
+<h4>Office Address</h4>
+<p>
+TVH Beliciaa Towers, Tower 2, 6th Floor,<br>
+71/4, MRC Nagar,<br>
+R A Puram, Chennai – 600028
+</p>
 </div>
 
-<div style="margin-top:14px; font-size:10px; color:#6b7280;">
+
+<div style="margin-top:14px; font-size:11px; color:#6b7280;">
 Designed and engineered by Vibranex Infotech Solutions
 </div>
 
@@ -392,5 +414,6 @@ Designed and engineered by Vibranex Infotech Solutions
 </div>
 </body>
 </html>
+
 
 
