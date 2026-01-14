@@ -28,19 +28,21 @@ background:#ffffff;
 
 /* HERO */
 .hero{
-background:linear-gradient(135deg,#0b1220,#111827,#020617);
+background:
+radial-gradient(circle at top, rgba(217,119,6,0.08), transparent 40%),
+linear-gradient(180deg, #0b1220, #020617);
 padding:56px 24px;
 text-align:center;
-border-bottom:3px solid #d97706;
 }
 
 .hero img{
-width:160px;
-height:160px;
+width:120px;
+height:120px;
 border-radius:50%;
 object-fit:cover;
-border:4px solid #ff6b35;
 margin-bottom:16px;
+box-shadow:0 0 0 6px rgba(217,119,6,0.15),
+           0 20px 40px rgba(0,0,0,0.4);
 }
 
 .hero h1{
@@ -68,24 +70,29 @@ color:#cbd5e1;
 line-height:1.75;
 }
 
+.hero-text{
+max-width:520px;
+margin:22px auto 0;
+text-align:left;
+}
 /* HERO CTA */
 .hero-cta{
 display:inline-block;
-margin-top:26px;
-padding:14px 34px;
-background:#d97706;
+margin-top:28px;
+padding:14px 36px;
+background:linear-gradient(135deg,#f59e0b,#d97706);
 color:#ffffff;
 text-decoration:none;
 font-weight:600;
-border-radius:30px;
+border-radius:999px;
 font-size:15px;
+box-shadow:0 14px 30px rgba(217,119,6,0.35);
 transition:all 0.3s ease;
-box-shadow:0 10px 25px rgba(217,119,6,0.35);
 }
 
 .hero-cta:hover{
-transform:translateY(-3px);
-box-shadow:0 16px 32px rgba(217,119,6,0.5);
+transform:translateY(-2px);
+box-shadow:0 20px 40px rgba(217,119,6,0.5);
 }
 
 /* SECTION */
@@ -426,6 +433,7 @@ Designed and engineered by Vibranex Infotech Solutions
 </div>
 </body>
 </html>
+
 
 
 
